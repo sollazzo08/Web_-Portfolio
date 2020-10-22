@@ -1,18 +1,13 @@
-import React, { Component } from 'react'
-import SideBar from './sidebar/sidebar';
-import AdminDash from './dashboard/adminDash';
-import '../adminPage/adminPageWrapper.css';
-class AdminPage extends Component {
-  render() {
+import React from 'react'
+import SideBar from './sidebar/Sidebar';
+
+
+const AdminPage = () => {
     return (
       <div>      
         <SideBar />   
-          <div className="container">
-            <AdminDash />
-          </div>
        </div>
     )
-  }
 }
 
 export default AdminPage;

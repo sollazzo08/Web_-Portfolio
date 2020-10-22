@@ -1,0 +1,49 @@
+.custom-carousel {
+  position: relative;
+  display: flex;
+  height: 100%;
+  width: 100%;
+
+  #goLeft {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 35px;
+    z-index: 1;
+  }
+  #goLeft:hover {
+    color: rgba(236, 138, 9, 0.9);
+    font-size: 50px;
+  }
+  #goRight {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 35px;
+    z-index: 1;
+  }
+  
+  #goRight:hover {
+   color: rgba(236, 138, 9, 0.9);
+   font-size: 50px;
+  }
+  
+ 
+  .custom-inner-carousel {
+    display: flex;
+    height: 85%;
+    width: 85%;
+    overflow-x: hidden;
+    margin: auto;
+
+    .custom-carousel-item {
+      display: flex;
+      height: 100%;
+      min-width: 100%;
+      color: white;
+    }
+  }
+}
+

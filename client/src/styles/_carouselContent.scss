@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
+
+.header {
+  font-size: 30px;
+  font-family: 'Titillium Web', sans-serif;
+  color: rgba(236, 138, 9, 0.9);
+}
+
+.desc {
+  font-size: 25px;
+  color:white;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+
+.tech-stack {
+  font-size: 25px;
+  color:white;
+  text-align: left;
+  font-family: 'Titillium Web', sans-serif;
+}
+@media screen and (max-width: 1423px) {
+  .header {
+    font-size: 25px;
+  }
+  .desc {
+    font-size: 20px;
+  }
+  .tech-stack {
+    font-size: 20px;
+  }
+}
+
+.img {
+  max-height: 100%;
+  max-width: 100%;
+  background-color: rgba(0,0,0,1);
+  background-repeat: no-repeat;
+  border-radius: 6px;
+  object-fit: contain;
+}
+
+
+

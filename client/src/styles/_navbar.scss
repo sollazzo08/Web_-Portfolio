@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tenali+Ramakrishna&display=swap');
+
+
+.navbar {
+  background-color: rgba(19, 15, 15, 0.993);
+  width: 100%;
+  box-shadow: 0px 0px 9px  rgba(236, 138, 9, 0.9);
+  .logo {
+    color:white;
+    font-size: 35px;
+    text-decoration: none;
+    font-family: 'Tenali Ramakrishna', sans-serif;
+    
+  }
+  
+  .logo:hover {
+    text-decoration: none;
+    color: rgb(236, 138, 9);
+  }
+  
+  .custom-nav-link{
+    color:white;
+    font-family: 'Tenali Ramakrishna', sans-serif;
+    font-size: 28px;
+  }
+  .custom-nav-link:hover{
+    text-decoration: none;
+    color: rgb(236, 138, 9);
+    
+  }
+  .navbar-toggler {
+    background: 1px solid rgb(236, 138, 9);
+    color: rgb(236, 138, 9);
+  }
+}
+
+

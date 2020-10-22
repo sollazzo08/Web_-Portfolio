@@ -1,16 +1,16 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-//Schema of the images stored in database
-const QuoteSchema= new Schema ({
-      quote: {
-        type: String,
-        required: true
-      },
-      date: {
-        type: Date,
-        default: Date.now
-      }
-})
+//Schema of the img stored in database
+const QuoteSchema = new Schema({
+  quote: {
+    type: String,
+    required: true,
+  },
+  date: {
+    type: Date,
+    default: Date.now,
+  },
+});
 
-module.exports = mongoose.model('Quote', QuoteSchema);
+module.exports = mongoose.model("Quote", QuoteSchema);

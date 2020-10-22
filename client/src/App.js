@@ -1,35 +1,19 @@
-import React from 'react';
-import './css/style.css';
-import AdminPage from './components/adminPage/adminPageWrapper';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from 'react-router-dom';
-import HomePageWrapper from './components/homepage/homePageWrapper';
-import MoviePage from './components/moviePage/moviePageWrapper';
+import React from "react";
+import AdminPageWrapper from "./components/adminPage/AdminPageWrapper";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import LandingPageWrapper from "./components/landingPage/LandingPageWrapper";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle";
 
-
-function App() {
-
+const App = () => {
   return (
-    
-  <Router>
-   <div>
-     
-     <Switch>
-     <HomePageWrapper path="/" exact component={HomePageWrapper}/> 
-     <Route path="/admin" component={AdminPage} />
-     <Route path='/movieList' component={MoviePage} />
-     </Switch>
-      
-     </div> 
-  </Router>   
+    <Router>
+      <Switch>
+        <Route path="/" exact component={LandingPageWrapper} />
+        <Route path="/admin" component={AdminPageWrapper} />
+      </Switch>
+    </Router>
   );
-}
-
-
+};
 
 export default App;

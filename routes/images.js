@@ -1,22 +1,23 @@
-var express = require('express');
+var express = require("express");
 var router = express.Router();
 //const {auth} = require('./verifyToken');
-//Import the Image schema 
-const Image = require('../models/Images');                  
-
+//Import the Image schema
+const Image = require("../models/img");
 
 //Retrieves the most recent image from the database
-router.get('/', (req, res) => {
-  Image.find().sort({"date": -1}).limit(1)
-  .then(image => res.json(image))
+router.get("/", (req, res) => {
+  Image.find()
+    .sort({ date: -1 })
+    .limit(1)
+    .then((image) => res.json(image));
 });
 
 //This is where the img is created and stored in database
-router.post('/', function(req, res) {
+router.post("/", function (req, res) {
   const newImage = new Image({
-    url: req.body.url
+    url: req.body.url,
   });
-  newImage.save().then(image => res.json(image));
+  newImage.save().then((image) => res.json(image));
 });
 
 module.exports = router;

@@ -1,5 +1,5 @@
 {
-  "name": "term-project",
+  "name": "web_portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -11,14 +11,13 @@
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.19.2",
     "bootstrap": "^4.4.1",
-    "jquery": "^3.4.1",
-    "prop-types": "^15.7.2",
+    "framer-motion": "^2.9.1",
+    "jquery": "^3.5.1",
+    "node-sass": "^4.14.1",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0",
+    "react-dom": "^16.14.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.3.1",
-    "typeit": "^7.0.2",
-    "typeit-react": "^0.1.1"
+    "react-scripts": "3.3.1"
   },
   "scripts": {
     "start": "react-scripts start",
