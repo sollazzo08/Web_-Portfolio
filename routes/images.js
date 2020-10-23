@@ -2,7 +2,7 @@ var express = require("express");
 var router = express.Router();
 //const {auth} = require('./verifyToken');
 //Import the Image schema
-const Image = require("../models/img");
+const Image = require("../models/Images");
 
 //Retrieves the most recent image from the database
 router.get("/", (req, res) => {
