@@ -1,14 +1,12 @@
 import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faWindowClose } from "@fortawesome/free-solid-svg-icons";
 import Carousel from "../carousel/Carousel";
 import "../../../styles/_projectModal.scss";
 
 const ProjectModal = ({ closeModal, openCela, openMisty, openTermProject, openRateMyDorm}) => {
   return (
     <div>
-      <AnimatePresence>
+      <AnimatePresence exitBeforeEnter>
         <motion.div
           className="custom-modal-container"
           initial={{ opacity: 0 }}
@@ -22,17 +20,15 @@ const ProjectModal = ({ closeModal, openCela, openMisty, openTermProject, openRa
               y: "150px",
               opacity: 1,
               transition: {
-                delay: 0.5,
+                delay: 0.1,
                 ease: "backOut",
-                duration: 0.8,
+                duration: 1.3,
               },
             }}
+          exit={{ y: "-100vh", opacity: 0 }}
           >
-            <Carousel openCela={openCela} openMisty={openMisty} openTermProject={openTermProject} openRateMyDorm={openRateMyDorm}/>
+            <Carousel openCela={openCela} openMisty={openMisty} openTermProject={openTermProject} openRateMyDorm={openRateMyDorm} closeModal={closeModal}/>
           </motion.div>
-          <div className="close">
-            <FontAwesomeIcon icon={faWindowClose} onClick={closeModal} />
-          </div>
         </motion.div>
       </AnimatePresence>
     </div>

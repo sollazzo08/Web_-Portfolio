@@ -30,6 +30,13 @@ const LandingPageContent = () => {
     setOpenTermProject(true);
   };
 
+  const closeModals = () => {
+    setOpenMisty(false);
+    setOpenCela(false);
+    setOpenRateMyDorm(false);
+  }
+  
+
   const handleQuoteShuffle = (e) => {
     e.preventDefault();
     axios
@@ -177,7 +184,7 @@ const LandingPageContent = () => {
                         </p> */}
               </div>
               {openRateMyDorm && (
-                <ProjectModal openRateMyDorm={openRateMyDorm} />
+                <ProjectModal openRateMyDorm={openRateMyDorm} closeModal={closeModals}/>
               )}
             </div>
             <div className="col-md-4">
@@ -187,7 +194,7 @@ const LandingPageContent = () => {
               >
                 <div className="project-title">Misty II</div>
               </div>
-              {openMisty && <ProjectModal openMisty={openMisty} />}
+              {openMisty && <ProjectModal openMisty={openMisty} closeModal={closeModals}/>}
             </div>
           </div>
           <div className="row text-project justify-content-between pt-4">
@@ -200,7 +207,7 @@ const LandingPageContent = () => {
                   Cela Home Improvements
                 </div>
               </div>
-              {openCela && <ProjectModal openCela={openCela} />}
+              {openCela && <ProjectModal openCela={openCela} closeModal={closeModals}/>}
             </div>
             <div className="col-md-4">
               <div
@@ -220,7 +227,7 @@ const LandingPageContent = () => {
             <u>Resume</u>
           </h2>
           <a
-            href="https://drive.google.com/file/d/1yAHiv7snDUPb_ENyg6qFcgKHN6F2mQ2s/view?usp=sharing"
+            href="https://drive.google.com/file/d/1RHPfRHy87UcJX7U2U20cm2NY68ydIrFi/view?usp=sharing"
             target="self"
           >
             <i className="mt-4 resume-icon far fa-file-pdf fa-10x"></i>

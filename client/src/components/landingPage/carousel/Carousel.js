@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faAngleDoubleRight,
   faAngleDoubleLeft,
+  faWindowClose,
 } from "@fortawesome/free-solid-svg-icons";
 import Content from "./Content";
 import Image from "./Image";
@@ -27,14 +28,13 @@ import mistyImage5 from "../../../images/misty/mongoDBAtlas.png";
 
 
 
-
 import "../../../styles/_projectModal.scss";
 import "../../../styles/_carousel.scss";
 
 
 const content = require("../../../content");
 
-const Carousel = ({ openCela, openMisty, openTermProject, openRateMyDorm }) => {
+const Carousel = ({ openCela, openMisty, openTermProject, openRateMyDorm, closeModal}) => {
   const [x, translateX] = useState(0);
   const [count, setCount] = useState(0);
 
@@ -80,6 +80,16 @@ const Carousel = ({ openCela, openMisty, openTermProject, openRateMyDorm }) => {
       return null;
   };
   
+  const getRepo = () => {
+    if(openMisty){
+      return "https://github.com/sollazzo08/misty-albany-499"
+    } else if(openCela){
+      return "https://github.com/sollazzo08/cela_job_veiwer"
+    } else if(openRateMyDorm) {
+      return "https://github.com/sollazzo08/Rate-My-Dorm"
+    } else return null;
+  };
+
   const getContent = (count) => {
 
     if (openCela) {
@@ -190,7 +200,13 @@ const Carousel = ({ openCela, openMisty, openTermProject, openRateMyDorm }) => {
           </div>
         </div>
       </div>
-      <div className="right-panel">{getContent(count)}</div>
+      <div className="right-panel">{getContent(count)}
+      
+      <div className="close-project-modal">
+            <FontAwesomeIcon icon={faWindowClose} onClick={closeModal} />
+      </div>
+        <a href={getRepo()} target="_blank" rel="noopener noreferrer"><button className="github-btn">Repository<i className="github-btn-icon fab fa-github"></i></button></a>
+      </div>
     </React.Fragment>
   );
 };

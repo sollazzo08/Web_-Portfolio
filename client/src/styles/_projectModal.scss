@@ -37,6 +37,7 @@
           height: 100%;
           width: 30%;
           border-radius: 0 20px 20px 0;
+          position: relative;
             .custom-carousel-content {
               display: flex;
               flex-direction: column;
@@ -46,6 +47,28 @@
               width: 100%;
               margin: 200px 30px;
               
+            }
+            .close-project-modal {
+              position: absolute;
+              top: 1%;
+              right:4%;
+              font-size: 26px;
+            }
+            .close-project-modal:hover {
+              color: rgba(236, 138, 9, 0.9);
+              font-size: 28px;
+            }
+            .github-btn {
+              position: absolute;
+              bottom: 1.3%;
+              left: 32%;
+              text-align: center;
+              border-radius: 5px;
+
+              i {
+                padding-left: 10px;
+                color: rgba(236, 138, 9, 0.9);
+              }
             }
         }
 

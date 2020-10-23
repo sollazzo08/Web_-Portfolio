@@ -32,9 +32,10 @@ const Content = ({content, count}) => {
       initial={{ y: "1000px", opacity: 1 }}
       animate={{
         y: "-200px",
-        transition: { ease: "easeIn", duration: 1 },
+        transition: { duration: 1.4 },
         opactiy: 0,
       }}
+     
     >
       <div className="header">{content.title}</div>
       <p className="desc">
