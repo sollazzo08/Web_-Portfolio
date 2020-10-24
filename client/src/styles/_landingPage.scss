@@ -2,7 +2,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Tenali+Ramakrishna&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Satisfy&family=Tenali+Ramakrishna&display=swap");
 
+.top-row {
+  height: 470px;
+}
 
+.bottom-row {
+  height: 350px;
+}
 
 .container-fluid {
   height: 100%;
@@ -101,11 +107,56 @@ h2 {
 }
 
 
-@media screen and (max-width: 1423px) {
+@media screen and (min-width: 499px) and (max-width: 1423px) {
   .text-block {
     height: 120px;
     width: 270px;
   }
+
+  .top-row {
+    height: 375px;
+  }
+  
+
+
+  .col-top-right {
+    min-width: 500px;
+  }
+
+  .profileImage {
+    display: none;
+  }
+
+}
+@media screen and (max-width: 500px) {
+
+  .top-row {
+    height: 50%;
+  }
+  
+  .bottom-row {
+    height: 50%;
+  }
+  .mask {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text-box-row1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40px;
+  }
+  .text-box-row2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40px;
+  }
+
+
 }
 @media screen and (min-width: 1423px) {
   .text-block {

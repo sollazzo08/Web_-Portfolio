@@ -72,16 +72,16 @@ const LandingPageContent = () => {
 
   return (
     <div className="container-fluid background-image">
-      <div className="row">
-        <div className="col-sm-6">
+      <div className="row top-row">
+        <div className="col-sm-6 ">
           <div className="row text-center">
-            <div className="col-md-12 ">
+            <div className="col-md-12 col-top-left">
               <div className="row text-skills mt-4 justify-content-between">
                 <div className="col-sm-12">
                   <h2 className="text-left text-light pl-3">
                     <u>Skills</u>
                   </h2>
-                  <div className="row mt-4 pt-2">
+                  <div className="row mt-4 pt-2 text-box-row1">
                     <div className="col-md-4">
                       <p className="icons">
                         <i className="fab fa-html5 fa-4x"></i>
@@ -135,7 +135,7 @@ const LandingPageContent = () => {
             </div>
           </div>
         </div>
-        <div className="col-sm-4 pt-4">
+        <div className="col-sm-4 pt-4 col-top-right">
           <h5 className="landingName mb-0 display-4 pl-4">{name}</h5>
           <h3 className="landingName2 mb-0 pl-4">{bio}</h3>
           <div className="text-right">
@@ -169,25 +169,21 @@ const LandingPageContent = () => {
           </h2>
         </div>
       </div>
-      <div className="row mx-auto ">
+      <div className="row mx-auto bottom-row">
         <div className="col-sm-5 justify-content-between">
-          <div className="row text-project justify-content-between">
-            <div className="col-md-4 ">
+          <div className="row text-project justify-content-between ">
+            <div className="col-md-4 text-box-row1">
               <div
                 className="text-block text-center"
                 onClick={handleOpenRateMyDormModal}
               >
                 <div className="project-title ">Rate My Dorm</div>
-                {/* <p>
-                          A web application made for UAlbany students where students
-                          can leave a review about their dorm expierence.
-                        </p> */}
               </div>
               {openRateMyDorm && (
                 <ProjectModal openRateMyDorm={openRateMyDorm} closeModal={closeModals}/>
               )}
             </div>
-            <div className="col-md-4">
+            <div className="col-md-4 text-box-row1">
               <div
                 className="text-block text-center"
                 onClick={handleOpenMistyModal}
@@ -197,8 +193,8 @@ const LandingPageContent = () => {
               {openMisty && <ProjectModal openMisty={openMisty} closeModal={closeModals}/>}
             </div>
           </div>
-          <div className="row text-project justify-content-between pt-4">
-            <div className="col-md-4">
+          <div className="row text-project justify-content-between pt-4 ">
+            <div className="col-md-4 text-box-row2">
               <div
                 className="text-block text-center"
                 onClick={handleOpenCelaModal}
@@ -209,7 +205,7 @@ const LandingPageContent = () => {
               </div>
               {openCela && <ProjectModal openCela={openCela} closeModal={closeModals}/>}
             </div>
-            <div className="col-md-4">
+            <div className="col-md-4 text-box-row2">
               <div
                 className="text-block text-center"
                 onClick={handleOpenTermProjectModal}
