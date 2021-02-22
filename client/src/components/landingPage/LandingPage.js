@@ -34,19 +34,18 @@ const LandingPageContent = () => {
     setOpenMisty(false);
     setOpenCela(false);
     setOpenRateMyDorm(false);
-  }
-  
+  };
 
   const handleQuoteShuffle = (e) => {
     e.preventDefault();
     axios
-      .get("https://mike.sollazzo.tk/api/quote/", {})
+      .get("https://msollazzo.com/api/quote/", {})
       .then((response) => setQuote(response.data.quote))
       .catch((error) => console.log(error.response));
   };
 
   useEffect(() => {
-    fetch("https://mike.sollazzo.tk/api/image/")
+    fetch("https://msollazzo.com/api/image/")
       .then((res) => res.json())
       .then((data) => {
         // console.log(data[0].url);
@@ -55,7 +54,7 @@ const LandingPageContent = () => {
       });
 
     axios
-      .get("https://mike.sollazzo.tk/api/userInfo/", {})
+      .get("https://msollazzo.com/api/userInfo/", {})
       .then((response) => {
         setName(response.data[0].name);
         setBio(response.data[0].bio);
@@ -63,7 +62,7 @@ const LandingPageContent = () => {
       .catch((err) => console.log(err));
 
     axios
-      .get("https://mike.sollazzo.tk/api/quote/", {})
+      .get("https://msollazzo.com/api/quote/", {})
       .then((response) => {
         setQuote(response.data.quote);
       })
@@ -180,7 +179,10 @@ const LandingPageContent = () => {
                 <div className="project-title ">Rate My Dorm</div>
               </div>
               {openRateMyDorm && (
-                <ProjectModal openRateMyDorm={openRateMyDorm} closeModal={closeModals}/>
+                <ProjectModal
+                  openRateMyDorm={openRateMyDorm}
+                  closeModal={closeModals}
+                />
               )}
             </div>
             <div className="col-md-4 text-box-row1">
@@ -190,7 +192,9 @@ const LandingPageContent = () => {
               >
                 <div className="project-title">Misty II</div>
               </div>
-              {openMisty && <ProjectModal openMisty={openMisty} closeModal={closeModals}/>}
+              {openMisty && (
+                <ProjectModal openMisty={openMisty} closeModal={closeModals} />
+              )}
             </div>
           </div>
           <div className="row text-project justify-content-between pt-4 ">
@@ -203,7 +207,9 @@ const LandingPageContent = () => {
                   Cela Home Improvements
                 </div>
               </div>
-              {openCela && <ProjectModal openCela={openCela} closeModal={closeModals}/>}
+              {openCela && (
+                <ProjectModal openCela={openCela} closeModal={closeModals} />
+              )}
             </div>
             <div className="col-md-4 text-box-row2">
               <div
@@ -223,7 +229,7 @@ const LandingPageContent = () => {
             <u>Resume</u>
           </h2>
           <a
-            href="https://drive.google.com/file/d/1RHPfRHy87UcJX7U2U20cm2NY68ydIrFi/view?usp=sharing"
+            href="https://drive.google.com/file/d/15L_YQ9zpC3oF77ypR-ez9s-Ig6gwbVg0/view?usp=sharing"
             target="self"
           >
             <i className="mt-4 resume-icon far fa-file-pdf fa-10x"></i>
